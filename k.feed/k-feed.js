@@ -31,8 +31,6 @@ document.body.innerHTML = '<main id="main" onload="ok()"><div id="load"><div id=
 document.getElementById('head').innerHTML = 'Курсы по программированию'
 
 
-
-
 //автофункция OFF
 if (info_t == ''){
     document.getElementById('info').remove()
