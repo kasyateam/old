@@ -1,4 +1,6 @@
 
+function ok() {
+    setTimeout(document.getElementById('load').remove(), 5000)
 if (window.location.href == 'https://m.kteam.tk/kf-1.html'){
  document.body.innerHTML = 'Новости'
 }else if (window.location.href == 'https://m.kteam.tk/kf-2.html'){
@@ -10,12 +12,4 @@ if (window.location.href == 'https://m.kteam.tk/kf-1.html'){
 }else {
  window.location.href = 'index.html'
 }
-
-
-
-
-
-
-function ok() {
-    setTimeout(document.getElementById('load').remove(), 5000)
 }
