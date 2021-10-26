@@ -9,13 +9,6 @@ if(window.location.host == 'm.kteam.tk' && window.innerWidth>600){
     location.href= 'https://m.kteam.tk/';
 }
 
-
-
-
-
-
-
-
 //Logining
 if(window.location.host == 'm.kteam.tk'){
     if(window.location.pathname == '/search' || window.location.pathname == '/search-vpn' ){
