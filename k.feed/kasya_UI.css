@@ -159,29 +159,10 @@ hr {
     text-decoration: none;
   }
   
-  
-  
-  
-  
-  
-  
-  
-  
-  @font-face {
-  font-family: "font";
-  src: url("./comfortaa.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-body {
-  font-family: "font";
-  background: #212121;
-  color:#fff;
-  font-size: 15pt;
-  margin-top: 60px;
-  box-sizing: border-box;
-  font-family: "font";
-}
+
+
+
+
 main{
  width: 95%;
  max-width: 400px;
