@@ -160,9 +160,6 @@ hr {
   }
   
 
-
-
-
 main{
  width: 95%;
  max-width: 400px;
@@ -172,6 +169,7 @@ main{
  padding: 10px;
  box-sizing: border-box;
 }
+
 hr {
   background: #AEAEAE;
   border: 1px #AEAEAE solid;
@@ -180,6 +178,7 @@ hr {
   margin-bottom: 20px;
   box-sizing: border-box;
 }
+
 nav{
   font-size:20pt;
   font-weight: 700;
@@ -187,16 +186,19 @@ nav{
   text-align: left;
   box-sizing: border-box;
 }
+
 .form {
   width: 95%;
   margin-top: 10px;
   box-sizing: border-box;
 }
+
 .form-name{
   color:#AEAEAE;
   margin-bottom: 2px;
   box-sizing: border-box;
 }
+
 input{
   background: #363636;
   outline: none;
@@ -209,14 +211,17 @@ input{
   margin-bottom: 10px;
   box-sizing: border-box;
 }
+
 .checkbox {
   width: auto;
   box-sizing: border-box;
 }
+
 .radio {
   width: auto;
   box-sizing: border-box;
 }
+
 .info{
   background: #7038f2;
   color:#fff;
