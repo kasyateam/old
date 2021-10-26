@@ -119,16 +119,11 @@ hr {
     padding: 2px;
 }
 #post_avtor{
-    font-weight: 600;
-    color: aliceblue;
-    padding: 2px;
-    border-radius: 5px;
-    border-radius: 20px;
-    width: fit-content;
-    height: fit-content;
-    overflow: auto;
-    margin: auto;
-    position: absolute;
+    box-sizing: border-box;
+    font-weight: 700;
+    padding-bottom: 10px;
+    font-size: 13pt;
+    color:#8048f8;
     box-sizing: border-box;
 }
 #post_text{
