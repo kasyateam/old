@@ -118,114 +118,13 @@
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
   </script>
-  
-    <script>
-  
-  /*
-    Это событие срабатывает в начале загрузки страницы.
-    В отличие от, например, webNavigation.onCompleted, оно происходит рано, давая нам возможность сразу приступить к удалению рекламы
-*/
-chrome.webNavigation.onCommitted.addListener(function (tab) {
-    // Запрещает запуск скрипта во время загрузки других фреймов
-    if (tab.frameId == 0) {
-        chrome.tabs.query({ active: true, lastFocusedWindow: true }, tabs => {
-
-            // Получает URL страницы
-            let url = tabs[0].url;
-            // Удаляет из URL необязательные определения протоколов и поддомен www
-            let parsedUrl = url.replace("https://", "")
-                .replace("http://", "")
-                .replace("www.", "")
-
-            // Удаляет путь и запросы, например linkedin.com/feed либо linkedin.com?query=value
-            // Нам нужен только базовый домен
-            let domain = parsedUrl.slice(0, parsedUrl.indexOf('/') == -1 ? parsedUrl.length : parsedUrl.indexOf('/'))
-                .slice(0, parsedUrl.indexOf('?') == -1 ? parsedUrl.length : parsedUrl.indexOf('?'));
-
-            try {
-                if (domain.length < 1 || domain === null || domain === undefined) {
-                    return;
-                } else if (domain == "kteam.tk") {
-                    runLinkedinScript();
-                    return;
-                }
-            } catch (err) {
-                throw err;
-            }
-
-        });
-    }
-});
-
-
-function runLinkedinScript() {
-    // Встраивает в страницу скрипт из файла
-    chrome.tabs.executeScript({
-        file: 'linkedin.js'
-    });
-    return true;
-}
-  
-  
-  </script> 
-  
-  
-  
-  
-  
-  
+   
   
   <script>
-  function removeAds() {
-
-    // Получает все элементы 'span' на странице
-    let spans = document.getElementsByTagName("span");
-
-    for (let i = 0; i < spans.length; ++i) {
-        // Проверяет, содержат ли они текст 'Promoted'
-        if (spans[i].innerHTML === "Promoted") {
-            // Получает div, который обёртывает рекламную вставку
-            let card = spans[i].closest(".feed-shared-update-v2");
-
-            // если класс изменился, и мы не можем найти его при помощи closest(), получает 6-го предка
-            if (card === null) {
-                // Может также быть card.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode :D
-                let j = 0;
-                card = spans[i];
-                while (j < 6) {
-                    card = card.parentNode;
-                    ++j;
-                }
-            }
-
-            // Удаляет рекламу!
-            card.setAttribute("style", "display: none !important;");
-        }
-    }
-}
-
-
-removeAds();
-
-// Обеспечивает, чтобы реклама удалялась по мере прокрутки страницы
-setInterval(function () {
-    removeAds();
-}, 100)
-    
+  
+  document.getElementById("adBlock").remove();
+  
   </script>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
 </body>
 
 </html>
