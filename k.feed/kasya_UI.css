@@ -6,7 +6,7 @@
 }
 body{
     font-family: "font";
-    padding: 5px 5px 5px 5px;
+    padding: 5px;
     background-color: #212121;
     color: aliceblue;
     box-sizing: border-box;
@@ -170,7 +170,6 @@ main{
  margin-right: auto;
  margin-left: auto;
  text-align: left;
- padding: 10px;
  box-sizing: border-box;
 }
 
